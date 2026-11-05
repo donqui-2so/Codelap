@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeLab - 웹 코딩 배우기</title>
+  <meta name="description" content="HTML, CSS, JavaScript를 직접 코드를 써보며 배우는 코딩 놀이터" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">&lt;/&gt;</span>
+      <h1>CodeLab</h1>
+    </div>
+    <div class="topbar-right">
+      <span id="progressText" class="progress-text">0 / 0 완료</span>
+      <button id="themeToggle" class="icon-btn" aria-label="다크모드 전환">🌙</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>레슨</h2>
+      <ul id="lessonList" class="lesson-list"></ul>
+    </aside>
+
+    <main class="main">
+      <section class="lesson-info">
+        <h2 id="lessonTitle"></h2>
+        <p id="lessonDesc"></p>
+        <div class="task" id="lessonTask"></div>
+      </section>
+
+      <section class="workspace">
+        <div class="pane editor-pane">
+          <div class="pane-head">
+            <span>코드</span>
+            <div class="btn-group">
+              <button id="hintBtn" class="btn ghost">힌트</button>
+              <button id="resetBtn" class="btn ghost">초기화</button>
+              <button id="runBtn" class="btn primary">▶ 실행 (Ctrl+Enter)</button>
+            </div>
+          </div>
+          <textarea id="editor" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+        </div>
+
+        <div class="pane preview-pane">
+          <div class="pane-head"><span>결과</span></div>
+          <iframe id="preview" title="미리보기" sandbox="allow-scripts"></iframe>
+          <div class="console">
+            <div class="pane-head small"><span>콘솔</span><button id="clearConsole" class="btn ghost small">지우기</button></div>
+            <pre id="consoleOut"></pre>
+          </div>
+        </div>
+      </section>
+
+      <div id="feedback" class="feedback" role="status"></div>
+
+      <nav class="lesson-nav">
+        <button id="prevBtn" class="btn ghost">← 이전</button>
+        <button id="nextBtn" class="btn primary">다음 →</button>
+      </nav>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
