@@ -18,11 +18,13 @@
       <button id="themeToggle" class="icon-btn" aria-label="다크모드 전환">🌙</button>
     </div>
   </header>
+  <div class="progress-bar" aria-hidden="true"><div id="progressFill"></div></div>
 
   <div class="layout">
     <aside class="sidebar">
       <h2>레슨</h2>
       <ul id="lessonList" class="lesson-list"></ul>
+      <button id="resetProgressBtn" class="btn ghost reset-progress">진행 초기화</button>
     </aside>
 
     <main class="main">
@@ -35,9 +37,15 @@
       <section class="workspace">
         <div class="pane editor-pane">
           <div class="pane-head">
-            <span>코드</span>
+            <div class="font-ctl">
+              <span>코드</span>
+              <button id="fontDown" class="btn ghost small" aria-label="글자 작게">A−</button>
+              <button id="fontUp" class="btn ghost small" aria-label="글자 크게">A+</button>
+            </div>
             <div class="btn-group">
               <button id="hintBtn" class="btn ghost">힌트</button>
+              <button id="solutionBtn" class="btn ghost">정답 보기</button>
+              <button id="copyBtn" class="btn ghost">복사</button>
               <button id="resetBtn" class="btn ghost">초기화</button>
               <button id="runBtn" class="btn primary">▶ 실행 (Ctrl+Enter)</button>
             </div>
