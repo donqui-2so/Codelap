@@ -1,13 +1,6 @@
 # CodeLab
 
-HTML / CSS / JavaScript를 직접 코드를 써보며 배우는 정적 웹사이트입니다. 빌드 과정 없이 깃허브 페이지에서 바로 동작합니다.
-
-## 깃허브 페이지로 배포하기
-
-1. 새 저장소를 만들고 `index.html`, `style.css`, `script.js`를 저장소 루트에 올립니다.
-2. 저장소의 **Settings → Pages**로 이동합니다.
-3. **Build and deployment**에서 Source를 `Deploy from a branch`로 두고, Branch를 `main` / `/ (root)`로 선택한 뒤 저장합니다.
-4. 잠시 후 `https://<계정이름>.github.io/<저장소이름>/` 주소로 접속할 수 있습니다.
+HTML / CSS / JavaScript를 직접 코드를 써보며 배우는 정적 웹사이트입니다. 
 
 ## 기능
 
