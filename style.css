@@ -214,6 +214,34 @@ body {
   min-height: 24px;
   font-weight: 600;
   padding: 0 4px;
+  white-space: pre-wrap;
+}
+
+.progress-bar { height: 4px; background: var(--border); }
+#progressFill {
+  height: 100%;
+  width: 0;
+  background: var(--ok);
+  transition: width 0.4s ease;
+}
+
+.font-ctl { display: flex; align-items: center; gap: 6px; }
+
+.lesson-list li.free { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); }
+.reset-progress { width: 100%; margin-top: 12px; color: var(--muted); }
+
+[hidden] { display: none !important; }
+
+.confetti {
+  position: fixed;
+  top: -30px;
+  font-size: 1.4rem;
+  pointer-events: none;
+  z-index: 50;
+  animation: confetti-fall 1.8s ease-in forwards;
+}
+@keyframes confetti-fall {
+  to { transform: translateY(105vh) rotate(360deg); opacity: 0.8; }
 }
 .feedback.ok { color: var(--ok); }
 .feedback.err { color: var(--err); }
